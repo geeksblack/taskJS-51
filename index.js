@@ -1,11 +1,13 @@
 /*
-Сделайте конструктор класса Employee.
+Передайте в конструктор класса Employee имя и зарплату работника.
+
+
 */
 class Employee {
-	constructor() {
-		console.log('test');
+	constructor(name,salary) {
+		console.log(name+' '+salary);
 	}
 
 }
-new Employee;
+new Employee('Yuriy','2000$');
 
