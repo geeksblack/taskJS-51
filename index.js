@@ -18,18 +18,16 @@
 
 */
 class Student {
+	name='Yuriy';
+	surn = 'Vysotskyi';
 	showName() {
-		return this.cape(this.name);
+		return this.name;
 	}
-	showSurn() {
-		return this.cape(this.surn);
+    showSurn() {
+		return this.surn;
 	}
-	cape(str) {
-		return str[0].toUpperCase() + str.slice(1);
-	}
+
 }
 let student = new Student;
-student.name = 'yuriy';
-student.surn = 'vysotskyi';
 console.log(student.showName())
 console.log(student.showSurn())
