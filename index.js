@@ -1,15 +1,14 @@
-// Дан див и две кнопки. По клику на первую кнопку спрячьте див, а по клику на вторую - покажите.
-
+// Дан див и две кнопки. По клику на первую кнопку покрасьте цвет дива в красный цвет, а по клику на вторую - верните исходный цвет.
 // Рішення:
-document.addEventListener('click', hide())
-function hide() {
+document.addEventListener('click', color())
+function color() {
 let elem = document.querySelector('div');
-	let hide = elem.style.display = 'none';
-	console.log(hide);	
+	let color = elem.style.backgroundColor = 'red';
+	console.log(color);	
 }
-document.addEventListener('click', show())
-function show() {
+document.addEventListener('click', none())
+function none() {
 	let elem = document.querySelector('div');
-	let show = elem.style.display = 'block';
-	console.log(show);
+	let none = elem.style.backgroundColor= '';
+	console.log(none);
 }
