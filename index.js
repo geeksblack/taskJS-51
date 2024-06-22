@@ -1,17 +1,15 @@
-/*
-Перепишите код через изученное свойство:
+/* 
+Для элемента заданы следующие стили:
 
-elem.style.width  = '100px';
-elem.style.height = '100px';
-elem.style.margin = '10px auto';
-elem.style.color  = 'red';
-
+#elem {
+	width: 200px;
+	height: 200px;
+}
+По клику на кнопку выведите ширину и высоту элемента.
 */ 
 // Рішення:
-let elem = document.getElementById('elem');
-elem.style.cssText =`
-	width: 100px;
-	height: 100px;
-    color:red;
-	margin:10px auto;
-	`
+document.addEventListener('click', function () {
+	let elem = document.querySelector('#elem');
+	let computedStyle = getComputedStyle(elem);
+	console.log(computedStyle.height, computedStyle.width);
+})
