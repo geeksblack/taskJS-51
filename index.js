@@ -1,14 +1,17 @@
-// Дан див и две кнопки. По клику на первую кнопку покрасьте цвет дива в красный цвет, а по клику на вторую - верните исходный цвет.
+/*
+Перепишите код через изученное свойство:
+
+elem.style.width  = '100px';
+elem.style.height = '100px';
+elem.style.margin = '10px auto';
+elem.style.color  = 'red';
+
+*/ 
 // Рішення:
-document.addEventListener('click', color())
-function color() {
-let elem = document.querySelector('div');
-	let color = elem.style.backgroundColor = 'red';
-	console.log(color);	
-}
-document.addEventListener('click', none())
-function none() {
-	let elem = document.querySelector('div');
-	let none = elem.style.backgroundColor= '';
-	console.log(none);
-}
+let elem = document.getElementById('elem');
+elem.style.cssText =`
+	width: 100px;
+	height: 100px;
+    color:red;
+	margin:10px auto;
+	`
