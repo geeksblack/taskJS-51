@@ -3,9 +3,15 @@
 
 
 class Employee{
-	show(name,salary) {
-		return name+' '+salary;
+	showName() {
+		console.log(this.name);
+	};
+	showSalary() {
+		console.log(this.salary);
 	};
 }
 let employee = new Employee;
-console.log(employee.show('Yuriy','2000$'));
+employee.name = 'Yuriy';
+employee.salary = '2000$';
+employee.showName();
+employee.showSalary();
