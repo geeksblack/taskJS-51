@@ -1,17 +1,35 @@
-// Сделайте в вашем классе Employee какой-нибудь тестовый метод. Вызовите его.
+/*
+№1⊗jsOpBsMIC
+
+В объект класса Student запишите свойства name и surn.
+
+№2⊗jsOpBsMIC
+
+Сделайте вспомогательный метод, который будет получать первый символ строки и делать его заглавным.
+
+№3⊗jsOpBsMIC
+
+Сделайте метод, который вернет инициалы студента, то есть первые буквы его имени и фамилии.
 
 
 
-class Employee{
+
+
+
+*/
+class Student {
 	showName() {
-		console.log(this.name);
-	};
-	showSalary() {
-		console.log(this.salary);
-	};
+		return this.cape(this.name);
+	}
+	showSurn() {
+		return this.cape(this.surn);
+	}
+	cape(str) {
+		return str[0].toUpperCase() + str.slice(1);
+	}
 }
-let employee = new Employee;
-employee.name = 'Yuriy';
-employee.salary = '2000$';
-employee.showName();
-employee.showSalary();
+let student = new Student;
+student.name = 'yuriy';
+student.surn = 'vysotskyi';
+console.log(student.showName())
+console.log(student.showSurn())
