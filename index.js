@@ -2,15 +2,13 @@
 Для элемента заданы следующие стили:
 
 #elem {
-	width: 200px;
-	height: 200px;
+	font-size: 2em;
 }
-По клику на кнопку увеличьте ширину и высоту элемента в два раза.
+По клику на кнопку выведите размер шрифта элемента.
 */ 
 // Рішення:
 document.addEventListener('click', function () {
 	let elem = document.querySelector('#elem');
-	elem.style.setProperty('height', '400px');
-	elem.style.setProperty('width', '400px');
-	console.log(elem);
+	let computedStyles=getComputedStyle(elem);
+	console.log(computedStyles.fontSize);
 })
