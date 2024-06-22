@@ -3,9 +3,9 @@
 
 
 class Employee{
-	show() {
-		return 'test';
+	show(name,salary) {
+		return name+' '+salary;
 	};
 }
 let employee = new Employee;
-console.log(employee.show());
+console.log(employee.show('Yuriy','2000$'));
