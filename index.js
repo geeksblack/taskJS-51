@@ -1,14 +1,6 @@
-/* 
-Для элемента заданы следующие стили:
-
-#elem {
-	font-size: 2em;
+// Сделайте класс Employee.
+// Создайте объект класса Employee и выведите его в консоль.
+class Employee{
 }
-По клику на кнопку выведите размер шрифта элемента.
-*/ 
-// Рішення:
-document.addEventListener('click', function () {
-	let elem = document.querySelector('#elem');
-	let computedStyles=getComputedStyle(elem);
-	console.log(computedStyles.fontSize);
-})
+let employee = new Employee;
+console.log(employee);
