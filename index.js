@@ -1,17 +1,20 @@
-// В следующем коде сделайте свойства приватными:
+// В следующем коде сделайте вспомогательный метод приватным:
+
+
 class Employee {
 	constructor(name, salary) {
-		this._name = name;
-		this._salary = salary;
+		this.name = name;
+		this.salary = salary;
+		this.#addSign();
 	}
 	
-	getName() {
-		return this._name;
-	}
 	getSalary() {
-		return this._salary;
+		return this.#addSign(this.salary);
 	}
-}
-let employee = new Employee('Yuriy', '2000$');
-console.log(employee.getName());
+	
+	#addSign(num) {
+		return num + '$';
+	}
+}	
+let employee = new Employee('Max', '1500');
 console.log(employee.getSalary());
