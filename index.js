@@ -1,83 +1,46 @@
-/*
-Расскажите, каким будет результат сравнения в следующем коде:
-
-
-*/
+// Определите, каким будет результат выполнения следующего кода:
+// class Student {
+	
+// }
 // class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
+	
 // }
 
-// let emp1 = new Employee('john');
-// let emp2 = new Employee('eric');
+// let employee = new Employee;
+// console.log(employee instanceof Employee);
+// console.log(employee instanceof Student);
 
-// console.log(emp1 === emp2);
-// результат зрівняння буде false адже ми отримуємо ссилку на два різних обєкти
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
+// true and false
 
-// let emp1 = new Employee('john');
-// let emp2 = new Employee('eric');
+//////////////////////////////////////////////////////////////////////
+//Переберите циклом массив объектов и выведите в консоль только имена работников.
 
-// console.log(emp1 === emp1);
-// результат зрівняння буде false адже ми отримуємо ссилку на то й же обєкт
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
+ 
+class Student {
+	constructor(name) {
+		this.name = name;
+	}
+}
+class Employee {
+	constructor(name) {
+		this.name = name;
+	}
+}
 
-// let emp1 = new Employee('john');
-// let emp2 = new Employee('john');
-
-// console.log(emp1 === emp2);
-// результат зрівняння буде false адже ми отримуємо ссилку на два різних обєкти
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
-
-// let emp1 = new Employee('john');
-// let emp2 = new Employee('eric');
-
-// console.log(emp1 !== emp1);
-// результат зрівняння буде false адже ми зрівнюємо з протилежним знаком
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
-
-// let emp1 = new Employee('john');
-// let emp2 = emp1;
-
-// console.log(emp1 === emp2);
-// результат буде true тому що ми переписали дану зміну;
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
-
-// let emp1 = new Employee('john');
-// let emp2 = new Employee('eric');
-
-// console.log(emp1 !== emp2);
-// результат буде true тому що ми заперечуємо рівність даних змін;
-// class Employee {
-// 	constructor(name) {
-// 		this.name = name;
-// 	}
-// }
-
-// let emp1 = new Employee('john');
-// let emp2 = emp1;
-// emp2.name = 'eric';
-
-// console.log(emp1 === emp2);
-//  результат буде true тому що ми зрівнюємо рівність даних змін;
+let users = [
+	new Student('user1'),
+	new Employee('user2'),
+	new Student('user3'),
+	new Employee('user4'),
+	new Student('user5'),
+	new Employee('user6'),
+	new Student('user7'),
+];
+for (let user of users) {
+	if (user instanceof Employee) {
+		console.log(user.name);
+	} else {
+		throw new Error('user is imcorrect');
+	}
+	
+}
