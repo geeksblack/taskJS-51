@@ -1,17 +1,17 @@
+// В следующем коде сделайте свойства приватными:
 class Employee {
 	constructor(name, salary) {
-		this.name = name;
-		this.salary = salary;
-		this.#addSign();
+		this._name = name;
+		this._salary = salary;
 	}
 	
+	getName() {
+		return this._name;
+	}
 	getSalary() {
-		return this.#addSign(this.salary);
-	}
-	
-	#addSign(num) {
-		return num + '$';
+		return this._salary;
 	}
 }
-let employee = new Employee('Yuriy', '2000');
+let employee = new Employee('Yuriy', '2000$');
+console.log(employee.getName());
 console.log(employee.getSalary());
