@@ -10,10 +10,16 @@ class Employee{
 		this.#name = name;	
 	}
 	setAge(age) {
-		this.#age = age;	
+		if (age > 0 && age < 120) {
+			this.#age = age;
+		} else {
+			throw new Error('age is incorrect');
+		}
+			
 	}
 	setSalary(salary) {
-		this.#salary = salary;	
+			this.#salary = salary;
+		
 	}
 	getName() {
 		return this.#name;
@@ -22,14 +28,16 @@ class Employee{
 		return this.#age;
 	}
 	getSalary() {
-		return this.#salary;
+		return this.addSign(this.#salary);
 	}
-
+    addSign(num) {
+		return num + '$';
+	}
 }
 let employee = new Employee;
 employee.setName('Yuriy');
 employee.setAge(22);
-employee.setSalary('2000$');
+employee.setSalary('2000');
 console.log(employee.getName());
 console.log(employee.getAge());
 console.log(employee.getSalary());
