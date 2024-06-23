@@ -1,30 +1,16 @@
-/*
-Перебирите созданный массив циклом и выведите на экран имена и зарплаты каждого работника.
+// Определите, какому классу принадлежит данный тег.
+// let elem = document.querySelector('div');
+// console.dir(elem instanceof HTMLDivElement);
 
-*/
-class Employee {
-	#name;
-	#salary;
-	constructor(name, salary) {
-		this.#name = name;
-		this.#salary = salary;
-	}
-	getName() {
-		return this.#name;
-	}
-	getSalary() {
-		return this.#salary;
-	}
+// let elems = document.querySelectorAll('div');
+// console.dir(elems instanceof NodeList);
 
-}
-let employees = [
-	new Employee('Max', 1000),
-	new Employee('Yuriy',2000),
-	new Employee('Nazar', 3000),
-	new Employee('Andriy', 1500),
-	new Employee('Sergiy', 1300),
-]
-for (let employee of employees) {
-	console.log(employee.getName());
-	console.log(employee.getSalary());
-}
+// let elem = document.querySelector('input');
+// console.dir(elem instanceof HTMLInputElement
+// );
+
+let elem = document.querySelector('div');
+let elems = elem.children;
+
+console.dir(elems instanceof HTMLCollection
+);
