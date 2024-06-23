@@ -1,19 +1,26 @@
+// В следующем коде сделайте вспомогательный метод защищенным:
+
 class User {
-	#name;
-	
 	setName(name) {
-		this.#name = name;
+		if (this.notEmpty(name)) {
+			this.name = name;
+		}
 	}
 	getName() {
-		return this.#name;
+		return this.name;
+	}
+	
+	_notEmpty(str) {
+		return str.length > 0;
 	}
 }
-
 class Employee extends User {
-	setName(name) {
-		let nameof = this.getName();
-		if (nameof.length > 0) {
-			this.setName(name) ;
+	setSurn(surn) {
+		if (this._notEmpty(surn)) {
+			this.surn = surn;
 		}
+	}
+	getSurn() {
+		return this.surn;
 	}
 }
