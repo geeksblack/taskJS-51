@@ -1,38 +1,26 @@
 /*
-Пусть класс Employee наследует от класса User из данного урока.
+Попробуйте в классе Employee воспользоваться приватным методом родителя.
 
-№2⊗jsOpIhCn
-
-Переопределите в класс Employee конструктор родителя, добавив в него параметр с возрастом и зарплатой.
-
-№3⊗jsOpIhCn
-
-Сделайте геттеры для возраста и зарплаты.
 
 
 */
+
 class User{
-	constructor(name, surn) {
+	setName(name) {
 		this.name = name;
-		this.surn = surn;
 	}
 	getName() {
 		return this.name;
 	}
-	getSurn() {
-		return this.surn;
+	#capeFirst(str) {
+		return str[0].toUpperCase() + str.splice(1);
 	}
 }
-class Employee{
-	constructor(name, surn, salary, age) {
-		super(name, surn);
-		this.salary = salary;
-		this.age = age;
+class Employee extends User{
+	setSurn(surn) {
+		this.surn = surn;
 	}
-	getAge() {
-		return this.age;
-	}	
-	getSalary() {
-		return this.salary;
+	getSurn() {
+		return this.#capeFirst(this.surn);//
 	}
 }
